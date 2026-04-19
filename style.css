@@ -1,44 +1,98 @@
 html, body {
     margin: 0;
     padding: 0;
-    
+    overflow-x: hidden; 
 }
-body
-{
-       background: linear-gradient(to right, rgb(48, 86, 170), rgb(47, 143, 199));
+
+body {
+    background: linear-gradient(to right, rgb(48, 86, 170), rgb(47, 143, 199));
+    min-height: 100vh;
 }
-.center
-{
+
+.center {
     text-align: center;
 }
-.topbar
-{
- 
-   font-size: 25px;
-   color: rgb(222, 242, 253);
-   
+
+.topbar {
+    font-size: clamp(18px, 2.5vw, 25px); 
+    color: rgb(222, 242, 253);
+    padding: 10px;
 }
-.line
-{
+
+.maintext {
+    color: rgb(222, 242, 253);
+    font-size: clamp(30px, 8vw, 75px); 
+    text-align: center;
+    width: 100%;
+    min-height: 175px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(52, 105, 219), rgb(64, 173, 236));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Added this to make sure no margin pushes the line away */
+    margin: 0; 
+}
+
+.line {
     height: 10px;
     width: 100%;
-    margin: 50px auto;
     background-color: rgb(64, 173, 236);
-    margin-top: -50px;
+    margin: 0;
+    /* This ensures it stays glued to the element above it */
+    display: block; 
+    /* If you want it to overlap slightly like your old -50px margin: */
+    position: relative;
+    top: 0; 
 }
-.maintext
-{
-   color: rgb(222, 242, 253);
-   font-size: 75px;
-   text-align: center;
-   width: 100%;
-   min-height: 175px;
-   box-sizing: border-box;
-   white-space: nowrap;
-   background: linear-gradient(to right, rgb(52, 105, 219), rgb(64, 173, 236));
-   padding-top: 0vh;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
+.videolineVL {
+    height: 40vh; 
+    width: 0.5%;
+    min-width: 5px; 
+    background-color: rgb(0, 0, 0);
+    /* 10vh keeps the vertical gap consistent on projectors */
+    margin-top: 10vh;
+    margin-left: 28.5%; 
+}
+
+.videolineHU {
+    height: 10px;
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    /* This snaps the horizontal line to the top of the vertical one */
+    margin-top: -42vh; 
+    margin-left: 28.5%;
+}
+.videolineHD {
+    height: 10px;
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    /* This snaps the horizontal line to the top of the vertical one */
+    margin-top: 39vh; 
+    margin-left: 28.5%;
+}
+.videolineVR {
+    height: 40vh; 
+    width: 0.5%;
+    min-width: 5px; 
+    background-color: rgb(0, 0, 0);
+    /* 10vh keeps the vertical gap consistent on projectors */
+    margin-top: -42vh;
+    margin-left: 68%; 
+}
+.videotext {
+    color: rgb(222, 242, 253);
+    font-size: clamp(30px, 8vw, 75px); 
+    text-align: center;
+    width: 100%;
+    min-height: 175px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Added this to make sure no margin pushes the line away */
+    margin: 0; 
+    margin-left: -1.35%;
+
 }
