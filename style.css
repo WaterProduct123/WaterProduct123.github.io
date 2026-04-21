@@ -96,3 +96,17 @@ body {
     margin-left: -1.35%;
 
 }
+
+.missiontext {
+    color: rgb(222, 242, 253);
+    font-size: clamp(10px, 3vw, 30px)
+    width: 100%;
+    min-height: 175px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(52, 105, 219), rgb(64, 173, 236));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Added this to make sure no margin pushes the line away */
+    margin: 0; 
+}
