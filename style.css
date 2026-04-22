@@ -39,12 +39,9 @@ body {
     width: 100%;
     background-color: rgb(64, 173, 236);
     margin: 0;
-    /* This ensures it stays glued to the element above it */
-    display: block; 
-    /* If you want it to overlap slightly like your old -50px margin: */
-    position: relative;
-    top: 0; 
+    display: block;
 }
+
 
 
 /* CENTER TEXT */
