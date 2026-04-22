@@ -103,7 +103,7 @@ body {
     width: 100%;
     min-height: 25px;
     display: flex;
-    
+    color: rgb(222, 242, 253);
     /* Added this to make sure no margin pushes the line away */
     margin: 0; 
 }
