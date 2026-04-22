@@ -46,56 +46,67 @@ body {
     top: 0; 
 }
 
-.videolineVL {
-    height: 40.5vh; 
-    width: 0.5%;
-    min-width: 5px; 
-    background-color: rgb(0, 0, 0);
-    /* 10vh keeps the vertical gap consistent on projectors */
-    margin-top: 10vh;
-    margin-left: 28.5%; 
-}
-
-.videolineHU {
-    height: 10px;
-    width: 40%;
-    background-color: rgb(0, 0, 0);
-    /* This snaps the horizontal line to the top of the vertical one */
-    margin-top: -42vh; 
-    margin-left: 28.5%;
-}
-.videolineHD {
-    height: 10px;
-    width: 40%;
-    background-color: rgb(0, 0, 0);
-    /* This snaps the horizontal line to the top of the vertical one */
-    margin-top: 39vh; 
-    margin-left: 28.5%;
-}
-.videolineVR {
-    height: 40.25vh; 
-    width: 0.5%;
-    min-width: 5px; 
-    background-color: rgb(0, 0, 0);
-    /* 10vh keeps the vertical gap consistent on projectors */
-    margin-top: -42vh;
-    margin-left: 68%; 
-}
-.videotext {
-    color: rgb(222, 242, 253);
-    font-size: clamp(30px, 8vw, 75px); 
-    text-align: center;
+.videoContainer {
+    position: relative;
     width: 100%;
-    min-height: 175px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Added this to make sure no margin pushes the line away */
-    margin: 0; 
-    margin-left: -1.35%;
-
+    height: 100vh;
 }
+
+/* LEFT VERTICAL LINE */
+.videolineVL {
+    position: absolute;
+    left: 28.5%;
+    top: 10vh;
+    width: 5px;
+    height: 40vh;
+    background: black;
+}
+
+/* RIGHT VERTICAL LINE */
+.videolineVR {
+    position: absolute;
+    left: 68%;
+    top: 10vh;
+    width: 5px;
+    height: 40vh;
+    background: black;
+}
+
+/* TOP HORIZONTAL LINE */
+.videolineHU {
+    position: absolute;
+    top: 10vh;
+    left: 28.5%;
+    width: calc(68% - 28.5%);
+    height: 10px;
+    background: black;
+}
+
+/* BOTTOM HORIZONTAL LINE */
+.videolineHD {
+    position: absolute;
+    top: calc(10vh + 40vh - 10px);
+    left: 28.5%;
+    width: calc(68% - 28.5%);
+    height: 10px;
+    background: black;
+}
+
+/* CENTER TEXT */
+.videotext {
+    position: absolute;
+    top: calc(10vh + 40vh/2 - 87px);
+    left: 0;
+    width: 100%;
+    color: rgb(222, 242, 253);
+    font-size: clamp(30px, 8vw, 75px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .missiontext {
     font-family: 'Brush Script MT', cursive;
