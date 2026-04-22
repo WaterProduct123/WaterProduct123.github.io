@@ -46,51 +46,6 @@ body {
     top: 0; 
 }
 
-.videoContainer {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-/* LEFT VERTICAL LINE */
-.videolineVL {
-    position: absolute;
-    left: 28.5%;
-    top: 10vh;
-    width: 5px;
-    height: 40vh;
-    background: black;
-}
-
-/* RIGHT VERTICAL LINE */
-.videolineVR {
-    position: absolute;
-    left: 68%;
-    top: 10vh;
-    width: 5px;
-    height: 40vh;
-    background: black;
-}
-
-/* TOP HORIZONTAL LINE */
-.videolineHU {
-    position: absolute;
-    top: 10vh;
-    left: 28.5%;
-    width: calc(68% - 28.5%);
-    height: 10px;
-    background: black;
-}
-
-/* BOTTOM HORIZONTAL LINE */
-.videolineHD {
-    position: absolute;
-    top: calc(10vh + 40vh - 10px);
-    left: 28.5%;
-    width: calc(68% - 28.5%);
-    height: 10px;
-    background: black;
-}
 
 /* CENTER TEXT */
 .videotext {
@@ -115,6 +70,19 @@ body {
     min-height: 25px;
     display: flex;
     color: rgb(222, 242, 253);
+    background: linear-gradient(to right, rgb(52, 105, 219), rgb(64, 173, 236));
     /* Added this to make sure no margin pushes the line away */
     margin: 0; 
 }
+.infotext {
+    color: rgb(222, 242, 253);
+    text-align: left;
+    width: 100%;
+    min-height: 175px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(52, 105, 219), rgb(64, 173, 236));
+    display: flex;
+    /* Added this to make sure no margin pushes the line away */
+    margin: 0; 
+}
+
